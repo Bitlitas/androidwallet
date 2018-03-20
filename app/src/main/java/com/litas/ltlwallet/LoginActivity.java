@@ -24,10 +24,13 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.media.MediaScannerConnection;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
@@ -35,6 +38,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.DisplayMetrics;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -64,6 +68,7 @@ import java.net.Socket;
 import java.net.SocketAddress;
 import java.nio.channels.FileChannel;
 import java.util.Date;
+import java.util.Locale;
 
 import timber.log.Timber;
 
@@ -75,6 +80,7 @@ public class LoginActivity extends SecureActivity
     static final int DAEMON_TIMEOUT = 500; // deamon must respond in 500ms
 
     private Toolbar toolbar;
+    Locale myLocale;
 
     @Override
     public void setToolbarButton(int type) {
@@ -98,6 +104,26 @@ public class LoginActivity extends SecureActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String lang = preferences.getString("lang", "lt");
+
+        //Log.e("lang", "lang in Main Activity:"+lang);
+        if(lang.equalsIgnoreCase("en")){
+            myLocale = new Locale("en");
+        } else {
+            myLocale = new Locale("lt");
+        }
+
+        Resources res = getResources();
+        DisplayMetrics dm = res.getDisplayMetrics();
+        Configuration conf = res.getConfiguration();
+
+        conf.locale = myLocale;
+        res.updateConfiguration(conf, dm);
+
+        Timber.i("ALLLIOOO:" + lang);
+
         Timber.d("onCreate()");
         super.onCreate(savedInstanceState);
         if (savedInstanceState != null) {
@@ -1044,6 +1070,23 @@ public class LoginActivity extends SecureActivity
         }
     }
 
+    void setLocale(String lang) {
+        myLocale = new Locale(lang);
+
+        Resources res = getResources();
+        DisplayMetrics dm = res.getDisplayMetrics();
+        Configuration conf = res.getConfiguration();
+
+        conf.locale = myLocale;
+        res.updateConfiguration(conf, dm);
+
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        preferences.edit().putString("lang", lang).commit();
+
+        Intent refresh = new Intent(this, LoginActivity.class);
+        startActivity(refresh);
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -1070,6 +1113,19 @@ public class LoginActivity extends SecureActivity
                 return true;
             case R.id.action_privacy_policy:
                 PrivacyFragment.display(getSupportFragmentManager());
+                return true;
+            case R.id.action_language:
+                Resources res = getResources();
+                Configuration conf = res.getConfiguration();
+
+                Timber.d("LANGUAGE ." + conf.locale.toString() + ".");
+
+                if (conf.locale.toString().equals("lt")) {
+                    setLocale("en");
+                } else {
+                    setLocale("lt");
+                }
+
                 return true;
             case R.id.action_testnet:
                 try {

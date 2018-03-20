@@ -1,0 +1,323 @@
+<resources>
+
+    <style name="ToolBarStyle.Base" parent="">
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+    </style>
+
+    <style name="ToolBarStyle" parent="ToolBarStyle.Base" />
+
+    <style name="ToolBarStyle.Event" parent="ToolBarStyle">
+        <item name="titleTextAppearance">@style/TextAppearance.Widget.Event.Toolbar.Title</item>
+    </style>
+
+    <style name="ToolBarStyle.ActionButton" parent="Widget.AppCompat.ActionButton">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Widget.Event.Toolbar.Title" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <!-- Text styling can be done here-->
+    </style>
+
+
+    <style name="MyMaterialTheme" parent="Theme.AppCompat.Light">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/bitlitasText</item>
+        <item name="colorAccent">@color/gradientPink</item>
+
+        <item name="android:spinnerItemStyle">@style/BitlitasSpinnerItem</item>
+        <item name="android:spinnerStyle">@style/BitlitasSpinner</item>
+    </style>
+
+    <style name="BitlitasLabel" parent="@android:style/TextAppearance.DeviceDefault.Medium">
+        <item name="android:textColor">?colorPrimary</item>
+        <item name="android:textColorHint">@color/bitlitasText</item>
+    </style>
+
+    <style name="BitlitasLabel.Small">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="BitlitasLabel.Gray">
+        <item name="android:textColor">@color/bitlitasGray</item>
+    </style>
+
+    <style name="BitlitasLabel.Caps">
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="BitlitasLabel.Caps.Black">
+        <item name="android:textColor">@color/bitlitasBlack</item>
+    </style>
+
+    <style name="BitlitasLabel.Caps.Gray">
+        <item name="android:textColor">@color/bitlitasGray</item>
+    </style>
+
+    <style name="BitlitasLabel.Caps.Gray.Small">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="BitlitasText.Funds">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/bitlitasFab</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BitlitasText.Info">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/bitlitasFab</item>
+    </style>
+
+    <style name="BitlitasText.Balance">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@color/bitlitasBlack</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BitlitasText.Balance.Orange">
+        <item name="android:textColor">@color/gradientOrange</item>
+    </style>
+
+    <style name="BitlitasText.Unconfirmed">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/bitlitasGray</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BitlitasText.PosAmount">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/bitlitasBlack</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BitlitasText.PosFee">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">#FF898989</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="BitlitasText.PosNote">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#FF4A4A4A</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="BitlitasText.PosDate">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">#FF616161</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <!-- textSize is in dp here to match the layout of the numpad-->
+    <style name="BitlitasLabel.NumPad">
+        <item name="android:textSize">36sp</item>
+        <item name="android:textColor">@color/bitlitasBlack</item>
+        <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="BitlitasLabel.Title">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="BitlitasLabel.Subtitle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/bitlitasWhite</item>
+    </style>
+
+    <style name="BitlitasLabel.Heading">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/bitlitasFab</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BitlitasFab" parent="@android:style/TextAppearance.DeviceDefault.Medium">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/bitlitasFab</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BitlitasText" parent="@android:style/TextAppearance.DeviceDefault.Medium">
+        <item name="android:textColor">?colorPrimary</item>
+        <item name="android:textColorHint">@color/bitlitasText</item>
+    </style>
+
+    <style name="BitlitasText.Gray">
+        <item name="android:textColor">@color/bitlitasGray</item>
+    </style>
+
+    <style name="BitlitasText.Black">
+        <item name="android:textColor">@color/bitlitasBlack</item>
+    </style>
+
+    <style name="BitlitasText.Monospace">
+        <item name="android:fontFamily">monospace</item>
+    </style>
+
+    <style name="BitlitasText.Monospace.Mnemonic">
+        <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BitlitasText.Label">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="BitlitasText.Confirm">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="BitlitasText.Confirm.Label">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BitlitasText.Label.Heading">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BitlitasText.Label.Medium">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="BitlitasText.Small">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="BitlitasText.Medium">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="BitlitasText.Medium.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BitlitasText.Large">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+
+    <style name="BitlitasText.Success">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/dotGray</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BitlitasText.Gray.SuccessFee">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="BitlitasText.Button" parent="@android:style/TextAppearance.DeviceDefault.Medium">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/gradientOrange</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="BitlitasText.Button.Small">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="BitlitasButton" parent="@style/Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_selector</item>
+        <item name="android:textColor">@color/bitlitasWhite</item>
+        <item name="android:textAppearance">@style/BitlitasLabel</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="BitlitasButton.Green">
+        <item name="android:background">@drawable/button_selector_green</item>
+    </style>
+
+    <style name="BitlitasButton.Small">
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="BitlitasButton.Alert">
+        <item name="android:textColor">@color/bitlitasBlack</item>
+        <item name="android:background">@color/gradientPink</item>
+    </style>
+
+    <style name="BitlitasButton.ReallySend"></style>
+
+    <style name="BitlitasButton.Take">
+        <item name="android:background">@color/take</item>
+    </style>
+
+    <style name="BitlitasButton.Give">
+        <item name="android:background">@color/give</item>
+    </style>
+
+    <style name="BitlitasEdit" parent="BitlitasText">
+        <item name="android:textColor">?colorPrimary</item>
+        <item name="android:backgroundTint">@color/gradientPink</item>
+    </style>
+
+    <style name="BitlitasEdit.Amount">
+        <!--item name="android:textSize">32sp</item-->
+        <item name="android:textColor">@color/gradientOrange</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="BitlitasEdit.Medium" parent="BitlitasText.Medium">
+        <item name="android:textColor">?colorPrimary</item>
+        <item name="android:backgroundTint">@color/gradientPink</item>
+    </style>
+
+    <style name="BitlitasEdit.Small">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="BitlitasProgress" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:progressTint">?colorPrimaryDark</item>
+        <item name="android:progressBackgroundTint">?colorPrimary</item>
+    </style>
+
+    <style name="BitlitasListView" parent="@android:style/Widget.ListView">
+        <item name="android:divider">@null</item>
+        <item name="android:dividerHeight">0dp</item>
+    </style>
+
+    <style name="BitlitasSpinner" parent="@style/Widget.AppCompat.Spinner">
+        <item name="android:background">@drawable/backgound_spinner</item>
+    </style>
+
+    <style name="BitlitasSpinnerItem" parent="android:Widget.TextView.SpinnerItem">
+        <item name="android:textAppearance">@style/BitlitasTextAppearanceSpinnerItem</item>
+    </style>
+
+    <style name="BitlitasTextAppearanceSpinnerItem" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+        <item name="android:textColor">@color/gradientOrange</item>
+    </style>
+
+    <style name="BitlitasSpinnerItem.Balance">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="BitlitasTextAppearanceSpinnerItemGray" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+        <item name="android:textColor">@color/bitlitasGray</item>
+    </style>
+
+    <style name="BitlitasSpinnerGray" parent="@style/Widget.AppCompat.Spinner">
+        <item name="android:background">@drawable/backgound_spinner_gray</item>
+    </style>
+
+    <style name="BitlitasSpinnerItemGray" parent="android:Widget.TextView.SpinnerItem">
+        <item name="android:textAppearance">@style/BitlitasTextAppearanceSpinnerItemGray</item>
+    </style>
+
+</resources>

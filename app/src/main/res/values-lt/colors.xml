@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tx_green">@color/take</color>
+    <color name="tx_red">@color/give</color>
+    <color name="tx_pending">@color/bitlitasFab</color>
+    <color name="tx_failed">@color/bitlitasBlack</color>
+
+    <color name="gradientOrange">#FFFF6105</color>
+    <color name="gradientPink">@color/take</color>
+
+    <color name="xmrtoYellow">#FFFFD700</color>
+
+    <color name="trafficGray">#9B9B9B</color>
+
+    <color name="take">#FF417505</color>
+    <color name="give">#dc0707</color>
+
+    <color name="bitlitasOrange">#cc5100</color>
+    <color name="bitlitasWhite">#ffffff</color>
+    <color name="bitlitasBlack">#000000</color>
+    <color name="bitlitasBlue">#1F4E97</color>
+    <color name="bitlitasGray">#FD9B9B9B</color>
+
+    <color name="dotGray">#FF4A4A4A</color>
+
+    <color name="bitlitasFab">#61000000</color>
+    <color name="bitlitasText">#FF616161</color>
+
+
+    <color name="colorPrimary">#cc5100</color>
+    <color name="colorPrimaryDark">#1a6121</color>
+    <color name="textColorPrimary">#dcdcdc</color>
+    <color name="windowBackground">#ffffff</color>
+    <color name="navigationBarColor">#2B4868</color>
+    <!--color name="colorAccent">#009ADA</color-->
+    <color name="colorAccent">@color/gradientPink</color>
+
+    <color name="anotherColor">#F8CC5A</color>
+
+    <color name="white">#ffffff</color>
+</resources>
