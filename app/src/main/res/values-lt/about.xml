@@ -22,7 +22,7 @@
         </p>
         ]]></string>
 
-    <string name="about_licenses" translatable="false"><![CDATA[
+    <string name="about_licenses"><![CDATA[
         <h1>Atviro kodo projektas</h1>
         <h3>bitlitas (https://bitlitas.lt)</h3>
         Copyright (c) 2018.

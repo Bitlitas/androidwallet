@@ -339,7 +339,7 @@
     <string name="archive_alert_yes">Yes, do that!</string>
     <string name="archive_alert_no">No thanks!</string>
 
-    <string-array name="mixin" translatable="false">
+    <string-array name="mixin">
         <item>Ringsize 5</item>
         <item>Ringsize 8</item>
         <item>Ringsize 13</item>

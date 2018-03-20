@@ -1,6 +1,4 @@
 <resources>
-    <string name="app_name" translatable="false">Bitlitas</string>
-    <string name="login_activity_name" translatable="false">Bitlitas</string>
     <string name="wallet_activity_name">Piniginė</string>
 
     <string name="menu_testnet">Testinis</string>
@@ -160,7 +158,6 @@
     <string name="title_amount">Suma</string>
     <string name="title_date">Data</string>
     <string name="xmr_unconfirmed_amount">+ %1$s LTL nepatvirtinta</string>
-    <string name="xmr" translatable="false">LTL</string>
     <string name="label_transactions">Pervedimai</string>
     <string name="text_daemonConnected">Jungtis prijungta!</string>
 
@@ -339,7 +336,7 @@
     <string name="archive_alert_yes">Taip, padaryti!</string>
     <string name="archive_alert_no">Ne, ačiū!</string>
 
-    <string-array name="mixin" translatable="false">
+    <string-array name="mixin">
         <item>Žiedai 5</item>
         <item>Žiedai 8</item>
         <item>Žiedai 13</item>
@@ -351,11 +348,6 @@
         <item>Žemas prioritetas</item>
         <item>Vidutinis prioritetas</item>
         <item>Aukštas prioritetas</item>
-    </string-array>
-
-    <string-array name="currency" translatable="false">
-        <item>LTL</item>
-        <item>EUR</item>
     </string-array>
 
     <string name="fab_create_new">Sukurti naują piniginę</string>

@@ -73,12 +73,12 @@
 <string name="help_list"><![CDATA[
         <h1>Wallet List</h1>
         <h2>Node</h2>
-        <p>Monerujo uses a Remote Node to communicate with the Bitlitas Network without having
+        <p>Bitlitas uses a Remote Node to communicate with the Bitlitas Network without having
         to download and store a copy of the whole blockchain itself. You can find a list of popular
-        remote nodes or learn how to run your own remote node here https://Bitlitasworld.com/<p>
-        <p>Monerujo comes with some Remote Nodes preset. It remembers the last five nodes used.</p>
+        remote nodes or learn how to run your own remote node<p>
+        <p>Bitlitas comes with some Remote Nodes preset. It remembers the last five nodes used.</p>
         <h2>Wallets</h2>
-        <p>Here you see your wallets. They are located in the <tt>monerujo</tt> folder
+        <p>Here you see your wallets. They are located in the <tt>bitlitas</tt> folder
         in the internal storage of your device. You can use a file explorer app to see them.
         You should make backups of this folder on a regular basis to off-device storage in
         case your device explodes or gets stolen.</p>
@@ -91,7 +91,7 @@
         <h3>Rename</h3>
         <p>Rename the wallet. Backups are not renamed.</p>
         <h3>Backup</h3>
-        <p>Make a copy of the wallet in the <tt>backups</tt> folder inside the <tt>monerujo</tt>
+        <p>Make a copy of the wallet in the <tt>backups</tt> folder inside the <tt>Bitlitas</tt>
         overwriting previous copies there.</p>
         <h3>Archive</h3>
         <p>Make a backup and delete the wallet afterwards. The copy remains in the <tt>backups</tt>
@@ -102,7 +102,7 @@
 <string name="help_wallet"><![CDATA[
         <h1>The Wallet</h1>
         <h2>Scanning</h2>
-        Because Bitlitas likes to keep things private, every time you open a Monerujo wallet we have to
+        Because Bitlitas likes to keep things private, every time you open a Bitlitas wallet we have to
         scan the blockchain to see if any new Bitlitas have been sent to your wallet, this only
         stores information to your phone which belongs to your wallet. Sometimes it can take a while
         because you haven’t synced in a long time.
@@ -146,7 +146,7 @@
         is fully optional and private. For example it can allow a business to reconcile your
         transaction with an item you bought.<p>
         <h2>Ring size</h2>
-        <p>There are a number of ring sizes to choose from in Monerujo. If you are a beginner user
+        <p>There are a number of ring sizes to choose from in Bitlitas. If you are a beginner user
         we recommend you stick with a ring size of 5. Increasing the ring size above 5 increases
         the amount of signers in a ring signature, theoretically providing increased plausible
         deniability. However setting high ring sizes can also make your transaction stand out on
